@@ -1,3 +1,10 @@
-.navbar{
-    text-align: center;
+nav{
+min-width:50px ;
+width: 100%;
+margin: 0% auto;
+border-top: solid 3px #ef8236;
+box-shadow: opx 1px 5px #000033;
+}
+.logo{
+    height: 90px;
 }
