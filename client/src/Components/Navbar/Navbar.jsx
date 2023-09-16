@@ -3,16 +3,15 @@ import { Link } from 'react-router-dom';
 import logo from '../../Asserts/logo.png';
 import search from '../../Asserts/search.svg';
 import Avatar from '../../Components/Avatar/Avatar';
-import Button from '../../Components/Button/Button';
 import './Navbar.css';
 
 const Navbar = () => {
-    var user = null;
+    var user = 123;
 
     return (
         <nav>
             <div className='navBar'>
-                <Link to='/' className='nav-item nav-btn'>
+                <Link to='/' className='nav-item nav-logo'>
                     <img src={logo} width={'100'} alt='Stack-Overflow' />
                 </Link>
                 <Link to='/' className='nav-item nav-btn'>
@@ -26,10 +25,10 @@ const Navbar = () => {
                 </Link>
                 <form action=''>
                     <input type='text' placeholder='Enter your search' />
-                    <img src={search} width={'18'} alt='' srcset='' />
+                    <img className='search-icon' src={search} width={'18'} alt='' srcset='' />
                 </form>
                 {user === null ? (
-                    <Link to='/' className='nav-item nav-btn'>
+                    <Link to='/' className='nav-item nav-link'>
                         Log in
                     </Link>
                 ) : (
@@ -37,7 +36,7 @@ const Navbar = () => {
                         <Link to='/'>
                             <Avatar>M</Avatar>
                         </Link>
-                        <Button>Log out</Button>
+                        <button className='nav-item nav-link'>Log out</button>
                     </>
                 )}
             </div>
